@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: lightblue;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin-top: 5rem;
+  width: 70vmin;
+}
+.select_btn {
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+/* angle dowm */
+
+.container.active .select_btn i {
+  transform: rotate(-180deg);
+  transition: all 0.4s;
+}
+.container .select_btn i {
+  transition: all 0.4s;
+  font-size: 20px;
+}
+.main {
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 0px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 7px;
+  max-height: 330px;
+  overflow-y: auto;
+  display: none;
+  transition: 0.4s ease-in;
+}
+.main.active {
+  display: block;
+}
+.container.active .main {
+  display: block;
+}
+
+.search_box {
+  position: relative;
+}
+.box {
+  /* height: 48px; */
+  background-color: #fff;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+.search_box input {
+  padding: 12px 35px;
+  outline: none;
+  border: 1px solid grey;
+  font-size: 20px;
+  border-radius: 3px;
+  width: 100%;
+  transition: 0.2s ease;
+}
+.search_box input::placeholder {
+  font-size: 15px;
+}
+/* search */
+.search_box i {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  font-size: 20px;
+}
+ul.options {
+  margin-top: 12px;
+  list-style: none;
+  padding: 0;
+}
+.options li {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.options li:hover {
+  background-color: rgba(221, 221, 221, 0.614);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.error {
+  text-align: center;
+}
